@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "module": "CommonJS",
+    "target": "ES2022",
+    "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
+
+    "types": ["node"],
+    "lib": ["ES2022"],
+
+    "sourceMap": true,
+
+    "strict": true,
+
+    "exactOptionalPropertyTypes": false,
+
+    "noUncheckedSideEffectImports": false,
+
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
