@@ -1,9 +1,9 @@
 ## 🍔 Delivery App
 
 🔗 Link to the project
-Live Demo (Frontend): [Встав посилання на Vercel/Netlify/Render тут]
+Live Demo (Frontend): []
 
-Backend API: [Встав посилання на Render/Railway/DigitalOcean тут]
+Backend API: [https://food-delivery-app-qrbh.onrender.com]
 
 Repository: [https://github.com/kotmari/food-delivery-app.git]
 
@@ -40,12 +40,12 @@ cd your-repo-name
 
 cd backend
 npm install
-# Create .env added DATABASE_URL
+### Create .env added DATABASE_URL
 npx prisma generate
 npx prisma db push
 npm run dev
 
 cd frontend
 npm install
-# Create.env added VITE_API_BASE_URL
+### Create.env added VITE_API_BASE_URL
 npm run dev
