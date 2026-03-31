@@ -44,7 +44,7 @@ export const Sidebar = () => {
   }
 
   return (
-    <aside className="w-52 sm:w-72 border-r border-border/50 p-6 overflow-y-auto">
+    <aside className="w-42 sm:w-72 border-r border-border/50 p-2.5 sm:p-6 overflow-y-auto">
       <h2 className="text-center text-xl font-bold mb-6">Shops:</h2>
       <h4 className="text-md font-bold mb-4">Rating Shops:</h4>
 

@@ -38,7 +38,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         )}
 
         {product.category?.name && (
-          <div className="absolute top-0 right-2 px-2 py-1 rounded-lg bg-yellow-300 backdrop-blur-sm text-[10px] font-bold uppercase text-text-h">
+          <div className="absolute top-0 right-1 px-2 py-1 rounded-lg bg-yellow-300 backdrop-blur-sm text-[10px] font-bold uppercase text-text-h">
             {product.category.name}
           </div>
         )}
@@ -63,7 +63,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <Button
           size="sm"
           onClick={handleAddToCart}
-          className="self-end active:scale-95 transition-transform"
+          className="sm:self-end active:scale-95 transition-transform"
         >
           <svg
             className="w-4 h-4 mr-1.5"

@@ -12,7 +12,7 @@ export const ShopItem = ({ shop, isActive, onSelect }: ShopItemProps) => {
     <div
       onClick={() => onSelect(shop.id)}
       className={`
-        relative flex items-center gap-4 p-3 rounded-2xl cursor-pointer transition-all duration-300
+        relative flex items-center sm:gap-4 p-3 rounded-2xl cursor-pointer transition-all duration-300
         border-2 group
         ${isActive
           ? "border-accent bg-accent-bg/40 shadow-sm"
@@ -49,8 +49,7 @@ export const ShopItem = ({ shop, isActive, onSelect }: ShopItemProps) => {
         </div>
       </div>
 
-      {/* Маленька стрілочка або індикатор */}
-      <div className={`transition-transform duration-300 ${isActive ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"}`}>
+        <div className={`transition-transform duration-300 ${isActive ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"}`}>
         <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
         </svg>
