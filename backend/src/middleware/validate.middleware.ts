@@ -8,7 +8,7 @@ export const orderSchema = yup.object({
   totalPrice: yup.number().positive().required(),
   items: yup.array().of(
     yup.object({
-      id: yup.string().required(),
+      productId: yup.string().required(),
       quantity: yup.number().min(1).required()
     })
   ).min(1, 'The shopping cart cannot be empty')

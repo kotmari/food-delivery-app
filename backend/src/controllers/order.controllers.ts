@@ -3,6 +3,7 @@ import { prisma } from "../lib/prisma";
 import { orderSchema } from "../middleware/validate.middleware";
 
 
+
 export const createOrder = async (
   req: Request,
   res: Response,
@@ -10,31 +11,33 @@ export const createOrder = async (
 ) => {
   try {
 
-   const validateData = await orderSchema.validate(req.body)
-    const { userName, userEmail, userPhone, userAddress, totalPrice, items } = validateData;
+    const validatedData = await orderSchema.validate(req.body);
+    
+    const { userName, userEmail, userPhone, userAddress, totalPrice, items } = validatedData;
 
-    if (!items || !Array.isArray(items) || items.length === 0) {
-      return res.status(400).json({ message: "Not found product" });
-    }
-
-    const newOrder = await prisma.order.create({
+      const newOrder = await prisma.order.create({
       data: {
         userName,
         userEmail,
         userPhone,
         userAddress,
         totalPrice: Number(totalPrice),
-        items: items
-        
-      }
+        items: items ?? [], 
+      },
     });
 
     res.status(201).json({
-      message: "Order seccussesfully",
-      orderId: newOrder.id
+      message: "Order successfully created",
+      orderId: newOrder.id,
     });
-  } catch (error) {
-    next(error);
+  } catch (error: any) {
+    // Якщо валідація Yup не пройшла, вона викине помилку, яку підхопить catch
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({ message: error.message });
+    }
+    
+    console.error("Prisma Error:", error);
+    next(error); // Передаємо в errorHandler
   }
 };
 

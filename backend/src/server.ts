@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import ShopsRouter from './routers/shopRoute'
 import ProductRoute from './routers/productRoute'
 import OrderRoute from './routers/orderRouter'
+import categoryRoute from './routers/categoryRouter'
 import { errorHandler } from './middleware/errorHandler'
 
 dotenv.config()
@@ -18,6 +19,7 @@ app.use(express.json())
 app.use('/api/shops', ShopsRouter)
 app.use('/api/products', ProductRoute)
 app.use('/api/orders', OrderRoute)
+app.use('/api/categories', categoryRoute)
 
 
 app.use(errorHandler)
