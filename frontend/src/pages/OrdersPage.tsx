@@ -104,7 +104,7 @@ export const OrdersPage = () => {
                   key={item.product.id}
                   className="flex gap-2 sm:gap-4 bg-social-bg border border-border/30 py-3 px-2 rounded-2xl group transition-all hover:border-accent/30"
                 >
-                  <div className="w-24 sm:w-32 sm:h-26 bg-border/20 rounded-xl flex items-center justify-center overflow-hidden shrink-0">
+                  <div className="w-20 sm:w-32 sm:h-26 bg-border/20 rounded-xl flex items-center justify-center overflow-hidden shrink-0">
                     {item.product.image_url ? (
                       <img
                         src={item.product.image_url}
