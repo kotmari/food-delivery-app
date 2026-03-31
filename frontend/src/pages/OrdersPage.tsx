@@ -26,6 +26,7 @@ export const OrdersPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit: SubmitHandler<IOrderFormData> = async (data) => {
+    setIsSubmitting(true)
     if (items.length === 0) {
       toast.error("Your cart is empty!");
       return;
@@ -51,7 +52,9 @@ export const OrdersPage = () => {
     } catch (error: unknown) {
       console.error(error);
       toast.error("Failed to create order");
-    }
+    } finally {
+    setIsSubmitting(false);
+  }
   };
 
   return (
