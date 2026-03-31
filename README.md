@@ -1,7 +1,7 @@
 ## 🍔 Delivery App
 
 🔗 Link to the project
-Live Demo (Frontend): []
+Live Demo (Frontend): [https://food-delivery-app-one-rosy.vercel.app/products]
 
 Backend API: [https://food-delivery-app-qrbh.onrender.com]
 
